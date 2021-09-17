@@ -37,6 +37,7 @@
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
-      "react/display-name": [0, { "ignoreTranspilerName": true }]
+      "react/display-name": [0, { "ignoreTranspilerName": true }],
+      "@typescript-eslint/no-non-null-assertion": "off"
     }
 }
