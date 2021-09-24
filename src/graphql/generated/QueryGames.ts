@@ -33,4 +33,6 @@ export interface QueryGames {
 export interface QueryGamesVariables {
   start?: number | null;
   limit: number;
+  where?: any | null;
+  sort?: string | null;
 }

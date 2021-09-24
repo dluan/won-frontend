@@ -3,8 +3,8 @@ import { gql, QueryHookOptions, useQuery } from '@apollo/client'
 import { QueryGames, QueryGamesVariables } from 'graphql/generated/QueryGames'
 
 export const QUERY_GAMES = gql`
-  query QueryGames($start: Int, $limit: Int!) {
-    games(start: $start, limit: $limit) {
+  query QueryGames($start: Int, $limit: Int!, $where: JSON, $sort: String) {
+    games(start: $start, limit: $limit, where: $where, sort: $sort) {
       ...GameFragment
     }
   }
