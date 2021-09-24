@@ -2,8 +2,8 @@ import { GameFragment } from 'graphql/fragments/game'
 import { gql } from '@apollo/client'
 
 export const QUERY_GAMES = gql`
-  query QueryGames($limit: Int!) {
-    games(limit: $limit) {
+  query QueryGames($start: Int, $limit: Int!) {
+    games(start: $start, limit: $limit) {
       ...GameFragment
     }
   }
