@@ -41,6 +41,8 @@ const ExploreSidebar = ({
 
   useEffect(() => {
     onFilter(values)
+    // this method comes from another template
+    // that we don't have access
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values])
 
