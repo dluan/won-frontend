@@ -66,7 +66,8 @@ const GamesTemplate = ({ filterItems }: GamesTemplateProps) => {
               <Grid>
                 {data?.games.map((game) => (
                   <GameCard
-                    key={game.id}
+                    id={game.id}
+                    key={game.slug}
                     title={game.name}
                     slug={game.slug}
                     developer={game.developers[0].name}
