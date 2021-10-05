@@ -1,3 +1,5 @@
 {
-  "projectId": "hkhibp"
+  "projectId": "hkhibp",
+  "video": false,
+  "integrationFolder": "cypress/e2e"
 }
