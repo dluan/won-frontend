@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  api:
+    container_name: wongames_backend
+    image: dluancr/won-backend:latest
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: won
+      DATABASE_PASSWORD: won
+      DATABASE_NAME: won
+      STRIPE_KEY: 'pk_test_51Jg1owHwttynMWEA0OfaslRbhseNiusN83sgOmApkSyaG35wYjkRkg6J8tfyXvjfiEOJHID3wfNKzyESEwPPGlSW00f8IRBS6E'
+    ports:
+      - '1337:1337'
+    depends_on:
+      - db
+
+  db:
+    container_name: wongames_database
+    image: dluancr/won-database:latest
+    ports:
+      - '5432:5432'
