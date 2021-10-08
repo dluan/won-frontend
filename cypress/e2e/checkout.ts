@@ -17,7 +17,6 @@ describe('Checkout', () => {
 
       // ir para explore page
       cy.findByRole('link', { name: /explore/i }).click()
-      cy.wait(2000)
       cy.url().should('eq', `${Cypress.config().baseUrl}/games`)
 
       // filtrar por jogos free
@@ -38,15 +37,11 @@ describe('Checkout', () => {
         cy.findByText(/buy it now/i).click()
       })
 
-      cy.wait(10000)
-
       // encontrar um texto de só jogos free
       cy.findByText(/Only free games, click buy and enjoy!/i).should('exist')
 
       // clicar para comprar
       cy.findByRole('button', { name: /buy now/i }).click()
-
-      cy.wait(3000)
 
       // redirecionar para a página de success
       cy.url().should('eq', `${Cypress.config().baseUrl}/success`)

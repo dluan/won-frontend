@@ -5,9 +5,7 @@ import { createUser } from '../support/generate'
 describe('User', () => {
   it('should sign up', () => {
     const user = createUser()
-
     cy.visit('/sign-up')
-
     cy.signUp(user)
 
     cy.url().should('eq', `${Cypress.config().baseUrl}/`)
@@ -16,7 +14,6 @@ describe('User', () => {
 
   it('should sign in and sign out', () => {
     cy.visit('/sign-in')
-
     cy.signIn()
 
     cy.findByText(/cypress/i).should('exist').click()
